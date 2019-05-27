@@ -1,0 +1,53 @@
+/* Color Theme Swatches in Hex */
+.Space-colours-1-hex { color: #FFFFFF; }
+.Space-colours-2-hex { color: #BDC728; }
+.Space-colours-3-hex { color: #260A09; }
+.Space-colours-4-hex { color: #6588A6; }
+.Space-colours-5-hex { color: #064072; }
+
+/* Color Theme Swatches in RGBA */
+.Space-colours-1-rgba { color: rgba(255, 255, 255, 1); }
+.Space-colours-2-rgba { color: rgba(189, 199, 40, 1); }
+.Space-colours-3-rgba { color: rgba(38, 10, 9, 1); }
+.Space-colours-4-rgba { color: rgba(101, 136, 166, 1); }
+.Space-colours-5-rgba { color: rgba(6, 64, 114, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Space-colours-1-hsla { color: hsla(0, 0, 100, 1); }
+.Space-colours-2-hsla { color: hsla(63, 66, 46, 1); }
+.Space-colours-3-hsla { color: hsla(2, 61, 9, 1); }
+.Space-colours-4-hsla { color: hsla(207, 26, 52, 1); }
+.Space-colours-5-hsla { color: hsla(207, 90, 23, 1); }
+
+/* WCAG */
+
+#064072 background, #FFFFFF = Contrast Ratio 10:1 
+#064072 background, #BDC728 = Contrast Ratio 5:1
+#6581A5 background, #260A09 = Contrast Ratio 4.97:1
+#260A09 background, #FFFFFF = Contrast Ratio 18:1
+#260A09 background, #BDC728 = Contrast Ratio 10:1
+#260A09 background, #6588A6 = Contrast Ratio 4.97:1
+#BDC728 background, #260A09 = Contrast Ratio 10:1
+#BDC728 background, #6588A6 = Contrast Ratio 5:1
+#FFFFFF background, #260A09 = Contrast Ratio 18:1
+#FFFFFF background, #064072 = Contrast Ratio 10:1
+
+Contrast Ratio 5:1, Contrast Ratio 4.97:1
+-------------------------------------------
+Normal Text
+WCAG AA: Pass
+WCAG AAA: Fail
+
+Large Text
+WCAG AA: Pass
+WCAG AAA: Pass
+
+Contrast Ratio 10:1, Contrast Ratio 18:1
+------------------------------------------
+Normal Text
+WCAG AA: Pass
+WCAG AAA: Pass
+
+Large Text
+WCAG AA: Pass
+WCAG AAA: Pass
