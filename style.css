@@ -1,0 +1,506 @@
+/***************** RESET ****************
+**********************************************/
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/***************** GLOBAL ****************
+**********************************************/
+
+@font-face {
+
+    font-family: starjedi;
+    src: url("fonts/Starjedi.ttf")
+}
+
+body {
+    
+    background-image: url(Images/stars-964022_1280.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left;
+ 
+}
+
+nav ul li {
+        
+    list-style-type: none;
+}
+
+nav ul li:hover {
+    
+    cursor: pointer;
+}
+    
+a {
+        
+    text-decoration: none;
+    font-family: news-gothic-std
+    
+}
+
+h1 {
+    
+    font-family: starjedi;
+    font-weight: 1;
+    color: white;
+    text-shadow: 2px 2px black;
+    
+}
+
+span {
+        
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+#cta_btn {
+    
+    display: block;
+    border-radius: 15% 50% 50% 15%;
+    text-align: left;
+    background-color: rgba(255,255,255,0.3);
+
+}
+
+button:hover {
+    
+    cursor: pointer;
+    text-shadow: 0px 0px blue;
+}
+
+#launch_btn button {
+    
+    font-family: news-gothic-std;
+    color: black;
+}
+
+#launch_btn button:active {
+        
+    color: white;
+}
+
+img { 
+    
+    display: none;    
+}
+
+ nav a {
+        
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px black;
+}
+
+nav li:hover > a {
+    
+    border-bottom: 2px solid blue
+}
+
+#searchbar {
+        
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+    
+#searchbar input:first-of-type {
+        
+    flex: 0.25;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px
+
+}
+    
+#searchbar input:last-of-type {
+        
+    color: white;
+    background-color: rgba(255,255,255,0.8);
+    width: 35px;
+    height: 35px;
+    margin-left: 30px;
+    border-radius: 40%;
+    padding: 10px
+        
+}
+    
+h2 {
+        
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 20px
+    
+}
+
+table {
+        
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    border-collapse: collapse;
+    width: 70%;
+     
+}
+
+td, th {
+        
+    padding: 10px;
+    border: 2px solid white;
+    background-color: blue
+       
+}
+
+/***************** Screen S/M ****************
+**********************************************/
+
+@media only screen and (max-width: 622px) {
+    
+    header {
+        
+        display: flex;
+    }
+    
+   
+    h1 {
+        
+        font-size: 24px;
+        flex: 25%;
+        margin: 10px;
+        letter-spacing: 0.03em;
+    }
+    
+    img {
+        
+        display: flex;
+        position: relative;
+        left: 95px;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        margin-top: 16px;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.7);
+        
+    }
+
+   #cta_btn {
+        
+        height: 70px;
+        width: 33%;
+        margin: auto;
+        font-weight: 600;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        transform: translateY(250px);
+
+    }
+    
+    #x_click {
+        
+        display: none;
+        width: 40px;
+        height: 40px;
+        margin: 8px;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.2);
+
+    }
+    
+    nav {
+        
+        position: relative;
+        top: 60px;
+        right: 8px;
+        visibility: hidden;
+        background-color: rgba(255,255,255,0.6);
+    }
+    
+    nav ul li{
+        
+        padding: 5px;
+        border-bottom: 2px solid;
+    }
+    
+    nav ul li a {
+        
+        display: block;
+        padding: 5px 5px;
+        font-size: 16px;
+        color: black;
+        font-weight: 550;
+        text-shadow: none;
+        
+    }
+    
+    .dropItem {
+        
+        display: none;
+    }
+    
+    h2 {
+        
+        margin-top: 20px
+    }
+}
+
+/***************** Screen L ****************
+**********************************************/
+@media only screen and (min-width: 623px) and (max-width: 1219px) {
+    
+    body {
+    
+    background-position: center
+    
+    }
+        
+    h1 {
+        
+        font-size: 48px;
+        display: block;
+        position: fixed;
+        top: 40%;
+        left: 25%;
+        width: 50%;
+        text-align: center;
+        letter-spacing: 0.09em;
+    }
+
+    nav a {
+        
+        height: 64px;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.1em;
+    }
+    
+    nav ul {
+
+        display: flex;
+        margin-top: 10px;
+
+    }
+    
+    nav ul li {
+        
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        border-right: 1px solid white;
+        background-color: rgba(255,255,255,0.3);
+    }
+    
+     nav ul li:last-of-type {
+        
+        border: none
+    }
+    
+    nav ul li ul {
+        
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+    }
+    
+    nav ul li:hover ul {
+      
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    nav ul li ul li {
+        
+        padding: 10px 5px;
+        background-color: rgba(255,255,255,0.2);
+        border: none;
+        border-bottom: 1px solid white;
+        text-align: left;
+    }
+    
+     nav ul li ul li a {
+        
+        font-size: 16px;
+    }
+
+    #cta_btn {
+        
+        font-size: 24px;
+        position: fixed;
+        top: 70%;
+        left: 35%;
+        width: 30%;
+        padding: 10px;
+        color: white;
+        padding: 12px;
+    }
+    
+    #title {
+        
+        font-size: 32px;
+        top: 10px;
+        
+    }
+    
+    #topnav {
+        
+        display: block;
+        position: fixed;
+        top: 15%;
+        width: 100%;
+    }
+    
+    h2 {
+        
+        margin-top: 250px;
+        display: block;
+    }
+}
+
+/***************** Screen XL ****************
+**********************************************/
+@media only screen and (min-width: 1220px) {
+    
+    body {
+    
+    background-position: top;
+    
+    }
+        
+    h1 {
+        
+        font-size: 72px;
+        display: block;
+        position: fixed;
+        top: 40%;
+        left: 25%;
+        width: 50%;
+        text-align: center;
+        letter-spacing: 0.09em;
+    }
+    
+    nav a {
+        
+        height: 64px;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.1em;
+        z-index: 1
+        
+    }
+    
+    nav ul {
+
+        display: flex;
+        margin: 25px auto;
+        max-width: 60%;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    
+    nav ul li {
+        
+        width: 100%;
+        position: relative;
+        border-right: 1px solid white;
+        background-color: rgba(255,255,255,0.3);
+        padding: 5px 0px;
+    }
+    
+    nav ul li:last-of-type {
+        
+        border: none
+    }
+    
+    nav ul li ul {
+        
+        position: absolute;
+        display: none;
+        top: 11px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    nav ul li:hover ul {
+      
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    nav ul li ul li {
+        
+        padding: 10px 5px;
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: rgba(255,255,255,0.2);
+        text-align: left;
+    }
+    
+    nav ul li ul li a {
+        
+        font-size: 16px;
+    }
+
+    
+    #cta_btn {
+        
+        font-size: 24px;
+        position: fixed;
+        border-radius: 15% 50% 50% 15%;
+        top: 80%;
+        left: 41%;
+        width: 20%;
+        color: white;
+        padding: 10px 10px 10px 20px;
+    } 
+    
+    #title {
+        
+        font-size: 32px;
+        top: 10px;
+        
+    }
+    
+    #topnav {
+        
+        position: fixed;
+        top: 15%;
+        width: 100%;
+    }
+    
+    h2 {
+        
+        margin-top: 300px
+    }
+    
+    #searchbar input:first-of-type {
+        
+        flex: 0.2;
+    
+    }
+    
+    table {
+        
+        width: 50%
+    }
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="description" content="Search and view launch schedules">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/gue2qgy.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Infinity &amp; Beyond</title>
+        
+    </head>
+    
+    <body>
+        
+        <header role="banner">
+            
+            <h1 id="title">infinity <span>&amp;</span><br> beyond</h1>
+            
+            <img src="Images/hamburger.png" role="button" alt="picture of hamburger menu / 3 lines on top of each other">
+            
+            <img id="x_click" src="Images/close_x.png" role="button" alt="picture of letter x">
+            
+            
+            <nav role="navigation" id="topnav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Live Feed</a></li>
+                    <li><a href="launch.html" id="dropContainer">Launch</a>
+                        <ul class= "dropItem">
+                            <li><a href="upcoming.html">Upcoming</a></li>
+                            <li><a href="past.html">Past</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h2>Upcoming</h2>
+        
+        <form action="launch.html" method="post" id="searchbar">
+        <input type="text" placeholder="search..." name="search">
+        <input type="image" src="Images/search_icon.png"> 
+        </form>
+        
+        <article role="article" id="launch_article">
+        
+               <table>
+                   <thead>
+                    <tr>
+                        <th>Flight Nr</th>
+                        <th>Date</th>
+                        <th>Mission</th>
+                        <th>Rocket</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                    <tr>
+                        <td>79</td>
+                        <td>2019-05-16</td>
+                        <td>Starlink 1</td>
+                        <td>Falcon 9</td>
+                    </tr>
+                   </tbody>
+                </table> 
+            
+               <table>
+                   <thead>
+                    <tr>
+                        <th>Flight Nr</th>
+                        <th>Date</th>
+                        <th>Mission</th>
+                        <th>Rocket</th>
+                   </tr>
+                   </thead>
+                    <tbody>
+                    <tr>
+                        <td>80</td>
+                        <td>2019-06-11</td>
+                        <td>Radarsat C1, C2, C3</td>
+                        <td>Falcon 9</td>
+                    </tr> 
+                   </tbody>
+                </table> 
+            
+        </article>
+        
+    </body>
+</html>
