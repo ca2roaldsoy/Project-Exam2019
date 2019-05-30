@@ -308,7 +308,7 @@ td, th {
     
      nav ul li:last-of-type {
         
-        border: none
+        border: none;
     }
     
     nav ul li ul {
