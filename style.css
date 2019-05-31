@@ -20,10 +20,10 @@
 
 body {
     
-    background-image: url(Images/stars-964022_1280.png);
+    background-image: url(Images/about.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: left;
+    background-position: center
  
 }
 
@@ -137,6 +137,7 @@ h2 {
     text-align: center;
     font-size: 40px;
     text-transform: uppercase;
+    display: block;
     margin-top: 20px
     
 }
@@ -161,6 +162,132 @@ td, th {
        
 }
 
+#subscribe {
+        
+    color: white;
+    text-align: center;
+    margin: 20px;
+    font-size: 14px;
+}
+    
+#subscribe a {
+        
+    color: white;
+    text-decoration: underline;
+    font-style: oblique
+    
+}
+    
+#subscribe input, #subscribe label {
+        
+    padding: 2px;
+    border-radius: 5px;
+    display: none;
+    margin: 10px auto;
+    justify-content: center;
+    font-size: 14px;
+    letter-spacing: 0.05em
+}
+
+#subscribe label {
+    
+    margin-top: 20px
+}
+
+#subscribe input:last-of-type {
+    
+    width: 60px;
+    height: 30px;
+    justify-content: center;
+    border: 2px solid blue;
+    margin-top: 20px;
+}
+
+#thanksMsg {
+    
+    font-size: 28px;
+    color: green;
+    font-weight: 600;
+    margin-top: 20px;
+    display: none;
+}
+
+#backToTopBtn {
+    
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 3px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    height: 50px;
+    border-radius: 50% 50% 4px 4px;
+}
+
+#p_about {
+    
+    color: black;
+    margin: 25px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.6);
+    padding: 20px;
+    border-radius: 20px;     
+}
+
+#contact_pg {
+    
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px
+}
+
+#contact_pg h3, #contact_pg p {
+    
+    padding: 5px
+}
+
+#cancel input, #cancel label {
+    
+    display: block;
+    margin: 20px auto;
+    
+}
+
+.contact_info {
+    
+    max-width: 300px;
+    height: 80px;
+    margin: 20px auto;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.3);
+    font-weight: 800;
+    color: black;
+}
+
+#cancel {
+    
+    max-width: 300px;
+    height: 100%;
+}
+
+#launches button {
+    
+    display: block;
+    margin: 25px auto;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 500px;
+    height: 7%;
+    border-radius: 20px 50% 50% 20px;
+    background-color: rgba(255,255,255,0.8);
+    font-weight: 600;
+}
 /***************** Screen S/M ****************
 **********************************************/
 
@@ -257,6 +384,7 @@ td, th {
         
         margin-top: 20px
     }
+    
 }
 
 /***************** Screen L ****************
@@ -269,7 +397,7 @@ td, th {
     
     }
         
-    h1 {
+    #header_index h1 {
         
         font-size: 48px;
         display: block;
@@ -352,35 +480,50 @@ td, th {
         padding: 12px;
     }
     
-    #title {
-        
-        font-size: 32px;
-        top: 10px;
-        
-    }
-    
-    #topnav {
-        
-        display: block;
-        position: fixed;
-        top: 15%;
-        width: 100%;
-    }
-    
     h2 {
         
-        margin-top: 250px;
+        margin-top: 100px;
         display: block;
+    }
+    
+    #heading_launch {
+        
+        display: flex;
+    }
+    
+    #heading_launch h1 {
+        
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        margin: 10px;
+        flex: 0.3;
+       
+    }
+    
+    #heading_launch nav {
+        
+        margin: 25px 10px 0px 5px;
+        flex: 1;
+    }
+    
+    #heading_launch nav ul li{
+        
+        padding: 5px;
+    }
+    
+    #heading_launch nav ul li a{
+        
+        letter-spacing: 0.8px;
     }
 }
 
 /***************** Screen XL ****************
-**********************************************/
+*********************************************/
 @media only screen and (min-width: 1220px) {
     
     body {
     
-    background-position: top;
+    background-position: top
     
     }
         
@@ -388,12 +531,10 @@ td, th {
         
         font-size: 72px;
         display: block;
-        position: fixed;
-        top: 40%;
-        left: 25%;
         width: 50%;
         text-align: center;
         letter-spacing: 0.09em;
+        margin: auto;
     }
     
     nav a {
@@ -482,25 +623,23 @@ td, th {
     
     #topnav {
         
-        position: fixed;
-        top: 15%;
         width: 100%;
     }
     
     h2 {
         
-        margin-top: 300px
+        margin-top: 100px
     }
     
     #searchbar input:first-of-type {
         
         flex: 0.2;
-    
     }
     
     table {
         
         width: 50%
     }
+    
 }
 

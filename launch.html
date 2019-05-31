@@ -8,13 +8,13 @@
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <link rel="stylesheet" href="https://use.typekit.net/gue2qgy.css">
         <link rel="stylesheet" href="style.css">
-        <title>Infinity &amp; Beyond</title>
+        <title>I&amp;B Launch Schedule</title>
         
     </head>
     
     <body>
         
-        <header role="banner">
+        <header role="banner" id="heading_launch">
             
             <h1 id="title">infinity <span>&amp;</span><br> beyond</h1>
             
@@ -43,11 +43,23 @@
         
         <form action="launch.html" method="post" id="searchbar">
         <input type="text" placeholder="search..." name="search">
-        <input type="image" src="Images/search_icon.png"> 
+        <input type="image" src="Images/search_icon.png">
         </form>
         
-        <article role="article" id="launch_article">
+    <aside>    
+        <form action="launch.html" method="post" id="subscribe">
+            <p>Want the latest updates&#63;<br> 
+            Please <a href="subscribe.html">subscribe</a></p>
+            <p id="thanksMsg">Thank you for subscribing</p>
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email">
+            <input type="submit" value="SEND">
+        </form>
+    </aside>
         
+        <article role="article" id="launch_article">
                <table>
                    <thead>
                     <tr>
@@ -85,8 +97,9 @@
                     </tr> 
                    </tbody>
                 </table> 
-            
         </article>
+        
+        <button onclick="backToTop()" id="backToTopBtn" title="Back to top">Top</button>
         
     </body>
 </html>
