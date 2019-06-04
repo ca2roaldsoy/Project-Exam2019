@@ -20,11 +20,10 @@
 
 body {
     
-    background-image: url(Images/about.jpg);
+    background-image: url(Images/launch.png);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center
- 
+    background-position: center;
 }
 
 nav ul li {
@@ -40,8 +39,7 @@ nav ul li:hover {
 a {
         
     text-decoration: none;
-    font-family: news-gothic-std
-    
+    font-family: news-gothic-std   
 }
 
 h1 {
@@ -85,7 +83,7 @@ button:hover {
     color: white;
 }
 
-img { 
+#hamburger{ 
     
     display: none;    
 }
@@ -102,6 +100,20 @@ nav li:hover > a {
     border-bottom: 2px solid blue
 }
 
+ #subText {
+        
+    color: white;
+    font-size: 22px;
+    display: block;
+    position: fixed;
+    padding: 20px;
+    margin: 0;
+    top: 50%;
+    max-width: 100%;
+    text-align: center;
+    letter-spacing: 0.09em;
+}
+
 #searchbar {
         
     display: flex;
@@ -112,7 +124,7 @@ nav li:hover > a {
     
 #searchbar input:first-of-type {
         
-    flex: 0.25;
+    flex: 0.35;
     border-radius: 50px;
     height: 30px;
     padding: 10px
@@ -186,7 +198,7 @@ td, th {
     margin: 10px auto;
     justify-content: center;
     font-size: 14px;
-    letter-spacing: 0.05em
+    letter-spacing: 0.05em;
 }
 
 #subscribe label {
@@ -196,20 +208,25 @@ td, th {
 
 #subscribe input:last-of-type {
     
-    width: 60px;
+    width: 100px;
     height: 30px;
+    background-color: green;
+    color: white;
     justify-content: center;
-    border: 2px solid blue;
     margin-top: 20px;
 }
 
 #thanksMsg {
     
     font-size: 28px;
-    color: green;
-    font-weight: 600;
+    color: lightgreen;
+    font-weight: 800;
     margin-top: 20px;
     display: none;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 2px 2px black
 }
 
 #backToTopBtn {
@@ -230,9 +247,10 @@ td, th {
 #p_about {
     
     color: black;
-    margin: 25px;
+    margin: 25px auto;
     font-size: 1.5em;
-    display: flex;
+    display: block;
+    max-width: 90%;
     justify-content: center;
     background-color: rgba(255,255,255,0.6);
     padding: 20px;
@@ -283,11 +301,47 @@ td, th {
     margin-top: 50px;
     width: 90%;
     max-width: 500px;
-    height: 7%;
+    height: 50px;
     border-radius: 20px 50% 50% 20px;
     background-color: rgba(255,255,255,0.8);
     font-weight: 600;
+    text-align: left;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
+
+#info_list li {
+        
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+    text-shadow: 2px 2px black;
+    background-color: rgba(0, 10, 255, 0.5);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#prev_next {
+    
+    color: white;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    font-size: 18px;
+    margin: 20px;
+}
+
+#prev_next p:last-of-type {
+    
+    flex: 0.98;
+    text-align: end;
+    margin-right: 20px;
+}
+
 /***************** Screen S/M ****************
 **********************************************/
 
@@ -298,7 +352,6 @@ td, th {
         display: flex;
     }
     
-   
     h1 {
         
         font-size: 24px;
@@ -307,7 +360,7 @@ td, th {
         letter-spacing: 0.03em;
     }
     
-    img {
+    #hamburger{
         
         display: flex;
         position: relative;
@@ -319,7 +372,16 @@ td, th {
         border: 1px solid;
         border-radius: 5px;
         padding: 10px;
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.7);   
+    }
+    
+    
+   #subText {
+    
+        font-size: 24px;
+        top: 40%;
+        left: 20%;
+        width: 60%;
         
     }
 
@@ -385,24 +447,41 @@ td, th {
         margin-top: 20px
     }
     
+    #rocket_img {
+        
+        display: block;
+        margin: 30px auto;
+        margin-top: 100px;
+        width: 95%;
+        min-height: 40px
+    }
+    
+    #prev_next {
+    
+        top: 33%;
+        width: 100%;
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    #prev_next p:last-of-type {
+    
+        flex: 0.95;
+        margin-right: 10px;
+    }
+    
 }
 
 /***************** Screen L ****************
 **********************************************/
 @media only screen and (min-width: 623px) and (max-width: 1219px) {
     
-    body {
-    
-    background-position: center
-    
-    }
-        
     #header_index h1 {
         
         font-size: 48px;
         display: block;
         position: fixed;
-        top: 40%;
+        top: 30%;
         left: 25%;
         width: 50%;
         text-align: center;
@@ -420,8 +499,15 @@ td, th {
     nav ul {
 
         display: flex;
-        margin-top: 10px;
+        margin-top: 20px;
+        margin: 25px auto;
+        max-width: 100%;
 
+    }
+    
+    #home_nav ul {
+        
+        max-width: 88%;
     }
     
     nav ul li {
@@ -434,7 +520,7 @@ td, th {
         background-color: rgba(255,255,255,0.3);
     }
     
-     nav ul li:last-of-type {
+    nav ul li:last-of-type {
         
         border: none;
     }
@@ -445,6 +531,8 @@ td, th {
         display: none;
         width: 100%;
         left: 0;
+        top: 10px;
+        overflow: hidden;
     }
     
     nav ul li:hover ul {
@@ -466,6 +554,14 @@ td, th {
      nav ul li ul li a {
         
         font-size: 16px;
+    }
+    
+    #subText {
+    
+        font-size: 24px;
+        top: 50%;
+        left: 20%;
+        width: 60%;
     }
 
     #cta_btn {
@@ -493,7 +589,7 @@ td, th {
     
     #heading_launch h1 {
         
-        font-size: 20px;
+        font-size: 19px;
         letter-spacing: 0.1em;
         margin: 10px;
         flex: 0.3;
@@ -502,18 +598,45 @@ td, th {
     
     #heading_launch nav {
         
-        margin: 25px 10px 0px 5px;
+        margin: 20px 11px 0px 5px;
         flex: 1;
     }
     
     #heading_launch nav ul li{
         
-        padding: 5px;
+        padding: 4px;
     }
     
     #heading_launch nav ul li a{
         
-        letter-spacing: 0.8px;
+        letter-spacing: 0.3px;
+    }
+    
+    #info_container {
+        
+        margin: 0 auto;
+        max-width: 50%;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+
+    #rocket_img {
+        
+        transform: rotate(90deg);
+        width: 650px;
+        position: absolute;
+        top: 430px;
+        left: 30%;
+        display: inline-block
+
+    }
+    
+    #info_list li {
+    
+        margin: 30px 25px;
+        padding: 25px;
+        max-width: 350px;
+        text-align: left;
     }
 }
 
@@ -523,18 +646,27 @@ td, th {
     
     body {
     
-    background-position: top
-    
+        background-position: top
     }
         
-    h1 {
+    #header_index h1 {
         
         font-size: 72px;
         display: block;
+        position: fixed;
+        top: 20%;
+        left: 25%;
         width: 50%;
         text-align: center;
         letter-spacing: 0.09em;
-        margin: auto;
+    }
+    
+    #heading_launch h1 {
+        
+        font-size: 28px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin: 20px
     }
     
     nav a {
@@ -543,8 +675,6 @@ td, th {
         align-items: center;
         justify-content: center;
         letter-spacing: 0.1em;
-        z-index: 1
-        
     }
     
     nav ul {
@@ -552,8 +682,7 @@ td, th {
         display: flex;
         margin: 25px auto;
         max-width: 60%;
-        text-align: center;
-        justify-content: center;
+        text-align: center
         
     }
     
@@ -575,7 +704,7 @@ td, th {
         
         position: absolute;
         display: none;
-        top: 11px;
+        top: 10px;
         max-width: 100%;
         width: 100%;
     }
@@ -600,7 +729,14 @@ td, th {
         
         font-size: 16px;
     }
-
+    
+    #subText {
+    
+        font-size: 32px;
+        top: 50%;
+        left: 20%;
+        width: 60%;
+    }
     
     #cta_btn {
         
@@ -618,7 +754,6 @@ td, th {
         
         font-size: 32px;
         top: 10px;
-        
     }
     
     #topnav {
@@ -631,6 +766,11 @@ td, th {
         margin-top: 100px
     }
     
+    #p_about {
+        
+        max-width: 60%
+    }
+    
     #searchbar input:first-of-type {
         
         flex: 0.2;
@@ -639,6 +779,13 @@ td, th {
     table {
         
         width: 50%
+    }
+    
+    #rocket_img {
+        
+        display: block;
+        margin: 50px auto;
+        margin-top: 100px;
     }
     
 }
