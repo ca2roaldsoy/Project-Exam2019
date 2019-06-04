@@ -20,10 +20,12 @@
 
 body {
     
-    background-image: url(Images/launch.png);
+    background-image: url(Images/about.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    font-family: news-gothic-std;
+    letter-spacing: 0.05em;
 }
 
 nav ul li {
@@ -39,14 +41,14 @@ nav ul li:hover {
 a {
         
     text-decoration: none;
-    font-family: news-gothic-std   
+    font-family: news-gothic-std;
 }
 
 h1 {
     
     font-family: starjedi;
     font-weight: 1;
-    color: white;
+    color: #FFFFFF;
     text-shadow: 2px 2px black;
     
 }
@@ -69,18 +71,19 @@ span {
 button:hover {
     
     cursor: pointer;
-    text-shadow: 0px 0px blue;
+    text-shadow: 0px 0px #064072;
 }
 
 #launch_btn button {
     
     font-family: news-gothic-std;
-    color: black;
+    color: #260A09;
+    font-weight: 600;
 }
 
 #launch_btn button:active {
         
-    color: white;
+    color: #064072;
 }
 
 #hamburger{ 
@@ -90,14 +93,14 @@ button:hover {
 
  nav a {
         
-    color: white;
+    color: #FFFFFF;;
     font-size: 18px;
     text-shadow: 2px 2px black;
 }
 
 nav li:hover > a {
     
-    border-bottom: 2px solid blue
+    border-bottom: 2px solid #BDC728;
 }
 
  #subText {
@@ -133,19 +136,17 @@ nav li:hover > a {
     
 #searchbar input:last-of-type {
         
-    color: white;
     background-color: rgba(255,255,255,0.8);
     width: 35px;
     height: 35px;
     margin-left: 30px;
     border-radius: 40%;
-    padding: 10px
-        
+    padding: 10px        
 }
     
 h2 {
         
-    color: white;
+    color: #BDC728;
     text-align: center;
     font-size: 40px;
     text-transform: uppercase;
@@ -157,7 +158,7 @@ h2 {
 table {
         
     margin: 0 auto;
-    color: white;
+    color: #FFFFFF;
     text-align: center;
     margin-top: 50px;
     padding: 10px;
@@ -169,14 +170,14 @@ table {
 td, th {
         
     padding: 10px;
-    border: 2px solid white;
-    background-color: blue
+    border: 2px solid #FFFFFF;
+    background-color: rgba(6, 64, 114, 0.8);
        
 }
 
 #subscribe {
         
-    color: white;
+    color: #FFFFFF;
     text-align: center;
     margin: 20px;
     font-size: 14px;
@@ -184,7 +185,7 @@ td, th {
     
 #subscribe a {
         
-    color: white;
+    color: #FFFFFF;
     text-decoration: underline;
     font-style: oblique
     
@@ -211,7 +212,7 @@ td, th {
     width: 100px;
     height: 30px;
     background-color: green;
-    color: white;
+    color: #FFFFFF;
     justify-content: center;
     margin-top: 20px;
 }
@@ -236,8 +237,8 @@ td, th {
     bottom: 5px;
     right: 3px;
     font-size: 14px;
-    background-color: red;
-    color: white;
+    background-color: #6588A6;
+    color: #FFFFFF;
     cursor: pointer;
     padding: 5px;
     height: 50px;
@@ -283,9 +284,9 @@ td, th {
     height: 80px;
     margin: 20px auto;
     border: 1px solid white;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.6);
     font-weight: 800;
-    color: black;
+    color: #260A09;
 }
 
 #cancel {
@@ -311,35 +312,39 @@ td, th {
     font-weight: 800;
 }
 
+#info_list {
+    
+    margin-top: 100px;
+}
+
 #info_list li {
         
-    color: white;
+    color: #FFFFFF;
     margin: 20px;
     padding: 20px;
     text-align: center;
     list-style-type: none;
     text-shadow: 2px 2px black;
-    background-color: rgba(0, 10, 255, 0.5);
+    background-color: rgba(6, 64, 114, 0.7);
     border-radius: 5px;
     font-weight: 600;
 }
 
 #prev_next {
     
-    color: white;
+    color: #FFFFFF;
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 50%;
     width: 100%;
     font-size: 18px;
-    margin: 20px;
+    padding: 20px
 }
 
 #prev_next p:last-of-type {
     
-    flex: 0.98;
+    flex: 1;
     text-align: end;
-    margin-right: 20px;
 }
 
 /***************** Screen S/M ****************
@@ -449,25 +454,13 @@ td, th {
     
     #rocket_img {
         
-        display: block;
-        margin: 30px auto;
-        margin-top: 100px;
-        width: 95%;
-        min-height: 40px
+        display: none;
+
     }
     
     #prev_next {
     
         top: 33%;
-        width: 100%;
-        font-size: 18px;
-        margin: 20px;
-    }
-
-    #prev_next p:last-of-type {
-    
-        flex: 0.95;
-        margin-right: 10px;
     }
     
 }
@@ -513,11 +506,10 @@ td, th {
     nav ul li {
         
         width: 100%;
-        padding: 10px;
         text-align: center;
         position: relative;
         border-right: 1px solid white;
-        background-color: rgba(255,255,255,0.3);
+        background-color: rgba(101, 136, 166, 0.5)
     }
     
     nav ul li:last-of-type {
@@ -532,22 +524,20 @@ td, th {
         width: 100%;
         left: 0;
         top: 10px;
-        overflow: hidden;
     }
     
     nav ul li:hover ul {
       
         display: flex;
         flex-direction: column;
-        
     }
     
     nav ul li ul li {
         
         padding: 10px 5px;
-        background-color: rgba(255,255,255,0.2);
+        background-color: rgba(101, 136, 166, 0.5);
         border: none;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #FFFFFF;
         text-align: left;
     }
     
@@ -572,7 +562,6 @@ td, th {
         left: 35%;
         width: 30%;
         padding: 10px;
-        color: white;
         padding: 12px;
     }
     
@@ -633,7 +622,7 @@ td, th {
     
     #info_list li {
     
-        margin: 30px 25px;
+        margin: 15px 25px;
         padding: 25px;
         max-width: 350px;
         text-align: left;
@@ -658,7 +647,7 @@ td, th {
         left: 25%;
         width: 50%;
         text-align: center;
-        letter-spacing: 0.09em;
+        letter-spacing: 0.18em;
     }
     
     #heading_launch h1 {
@@ -690,7 +679,7 @@ td, th {
         
         width: 100%;
         position: relative;
-        border-right: 1px solid white;
+        border-right: 1px solid #FFFFFF;
         background-color: rgba(255,255,255,0.3);
         padding: 5px 0px;
     }
@@ -720,7 +709,7 @@ td, th {
         
         padding: 10px 5px;
         border: none;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #FFFFFF;
         background-color: rgba(255,255,255,0.2);
         text-align: left;
     }
@@ -746,7 +735,6 @@ td, th {
         top: 80%;
         left: 41%;
         width: 20%;
-        color: white;
         padding: 10px 10px 10px 20px;
     } 
     
@@ -786,6 +774,12 @@ td, th {
         display: block;
         margin: 50px auto;
         margin-top: 100px;
+    }
+    
+    #info_list {
+    
+        margin-top: 0px;
+        
     }
     
 }
