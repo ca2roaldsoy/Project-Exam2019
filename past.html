@@ -4,7 +4,7 @@
         
         <meta charset="utf-8">
         <meta lang="en">
-        <meta name="description" content="Search and view launch schedules">
+        <meta name="description" content="view past launches">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <link rel="stylesheet" href="https://use.typekit.net/gue2qgy.css">
         <link rel="stylesheet" href="style.css">
@@ -27,7 +27,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="">Live Feed</a></li>
-                    <li><a href="launch.html" id="dropContainer">Launch</a>
+                    <li><a id="curr_pg" href="launchopt.html">Launch</a>
                         <ul class= "dropItem">
                             <li><a href="upcoming.html">Upcoming</a></li>
                             <li><a href="past.html">Past</a></li>
@@ -38,8 +38,8 @@
                 </ul>
             </nav>
         </header>
-        
-        <h2>Upcoming</h2>
+    
+        <h2>past <br>launches</h2>
         
         <form action="launch.html" method="post" id="searchbar">
         <input type="text" placeholder="search..." name="search">
@@ -102,4 +102,7 @@
         <button onclick="backToTop()" id="backToTopBtn" title="Back to top">Top</button>
         
     </body>
+    
+     <script src="script.js"></script>
+    
 </html>

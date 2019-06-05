@@ -1,4 +1,4 @@
-/***************** RESET ****************
+/***************** RESET *********************
 **********************************************/
 
 * {
@@ -9,8 +9,8 @@
     
 }
 
-/***************** GLOBAL ****************
-**********************************************/
+/***************** GLOBAL ****************************************
+******************************************************************/
 
 @font-face {
 
@@ -24,66 +24,70 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    font-family: news-gothic-std;
+    font-family: news-gothic-std, Helvetica, sans-serif;
     letter-spacing: 0.05em;
 }
+
+/***************** Navigation ****************
+**********************************************/
 
 nav ul li {
         
     list-style-type: none;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
     
     cursor: pointer;
+}
+
+nav a {
+        
+    color: #FFFFFF;;
+    font-size: 18px;
+    text-shadow: 2px 2px black;
+    
+}
+
+nav li a:hover, #curr_pg {
+    
+    border-bottom: 2px solid #BDC728;
+}
+
+nav ul li ul {
+        
+    position: absolute;
+    display: none;
+    top: 10px;
+    max-width: 100%;
+    width: 100%;
+
+}
+    
+nav ul li:hover ul {
+      
+    display: flex;
+    flex-direction: column;
+        
+}
+    
+nav ul li ul li {
+        
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    text-align: center
+    
+}
+    
+nav ul li ul li a {
+        
+    font-size: 16px;  
 }
     
 a {
         
     text-decoration: none;
-    font-family: news-gothic-std;
-}
-
-h1 {
-    
-    font-family: starjedi;
-    font-weight: 1;
-    color: #FFFFFF;
-    text-shadow: 2px 2px black;
-    
-}
-
-span {
-        
-    font-family: sans-serif;
-    font-weight: 800;
-}
-
-#cta_btn {
-    
-    display: block;
-    border-radius: 15% 50% 50% 15%;
-    text-align: left;
-    background-color: rgba(255,255,255,0.3);
-
-}
-
-button:hover {
-    
-    cursor: pointer;
-    text-shadow: 0px 0px #064072;
-}
-
-#launch_btn button {
-    
-    font-family: news-gothic-std;
-    color: #260A09;
-    font-weight: 600;
-}
-
-#launch_btn button:active {
-        
-    color: #064072;
 }
 
 #hamburger{ 
@@ -91,19 +95,55 @@ button:hover {
     display: none;    
 }
 
- nav a {
-        
-    color: #FFFFFF;;
-    font-size: 18px;
-    text-shadow: 2px 2px black;
-}
-
-nav li:hover > a {
+#prev_next {
     
-    border-bottom: 2px solid #BDC728;
+    color: #FFFFFF;
+    display: flex;
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    font-size: 18px;
+    padding: 20px
 }
 
- #subText {
+#prev_next p:last-of-type {
+    
+    flex: 1;
+    text-align: end;
+}
+
+/********** Headings & Text ******************
+**********************************************/
+
+h1 {
+    
+    font-family: starjedi, Rockwell, serif;
+    font-weight: 1;
+    color: #FFFFFF;
+    text-shadow: 2px 2px black;
+    letter-spacing: 0.2em
+    
+}
+
+h2 {
+        
+    color: #BDC728;
+    text-align: center;
+    font-size: 40px;
+    display: block;
+    margin-top: 20px;
+    font-family: starjedi, Rockwell, serif; 
+    letter-spacing: 0.2em
+}
+
+
+span {
+        
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+#subText {
         
     color: white;
     font-size: 22px;
@@ -115,134 +155,6 @@ nav li:hover > a {
     max-width: 100%;
     text-align: center;
     letter-spacing: 0.09em;
-}
-
-#searchbar {
-        
-    display: flex;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-}
-    
-#searchbar input:first-of-type {
-        
-    flex: 0.35;
-    border-radius: 50px;
-    height: 30px;
-    padding: 10px
-
-}
-    
-#searchbar input:last-of-type {
-        
-    background-color: rgba(255,255,255,0.8);
-    width: 35px;
-    height: 35px;
-    margin-left: 30px;
-    border-radius: 40%;
-    padding: 10px        
-}
-    
-h2 {
-        
-    color: #BDC728;
-    text-align: center;
-    font-size: 40px;
-    text-transform: uppercase;
-    display: block;
-    margin-top: 20px
-    
-}
-
-table {
-        
-    margin: 0 auto;
-    color: #FFFFFF;
-    text-align: center;
-    margin-top: 50px;
-    padding: 10px;
-    border-collapse: collapse;
-    width: 70%;
-     
-}
-
-td, th {
-        
-    padding: 10px;
-    border: 2px solid #FFFFFF;
-    background-color: rgba(6, 64, 114, 0.8);
-       
-}
-
-#subscribe {
-        
-    color: #FFFFFF;
-    text-align: center;
-    margin: 20px;
-    font-size: 14px;
-}
-    
-#subscribe a {
-        
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-style: oblique
-    
-}
-    
-#subscribe input, #subscribe label {
-        
-    padding: 2px;
-    border-radius: 5px;
-    display: none;
-    margin: 10px auto;
-    justify-content: center;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-}
-
-#subscribe label {
-    
-    margin-top: 20px
-}
-
-#subscribe input:last-of-type {
-    
-    width: 100px;
-    height: 30px;
-    background-color: green;
-    color: #FFFFFF;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-#thanksMsg {
-    
-    font-size: 28px;
-    color: lightgreen;
-    font-weight: 800;
-    margin-top: 20px;
-    display: none;
-    background-color: rgba(255,255,255,0.2);
-    padding: 10px;
-    border-radius: 5px;
-    text-shadow: 2px 2px black
-}
-
-#backToTopBtn {
-    
-    display: none;
-    position: fixed;
-    bottom: 5px;
-    right: 3px;
-    font-size: 14px;
-    background-color: #6588A6;
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 5px;
-    height: 50px;
-    border-radius: 50% 50% 4px 4px;
 }
 
 #p_about {
@@ -281,35 +193,19 @@ td, th {
 .contact_info {
     
     max-width: 300px;
-    height: 80px;
+    height: 100px;
     margin: 20px auto;
     border: 1px solid white;
     background-color: rgba(255,255,255,0.6);
     font-weight: 800;
     color: #260A09;
+    padding: 10px;
 }
 
 #cancel {
     
     max-width: 300px;
     height: 100%;
-}
-
-#launches button {
-    
-    display: block;
-    margin: 25px auto;
-    margin-top: 50px;
-    width: 90%;
-    max-width: 500px;
-    height: 50px;
-    border-radius: 20px 50% 50% 20px;
-    background-color: rgba(255,255,255,0.8);
-    font-weight: 600;
-    text-align: left;
-    padding-left: 20px;
-    letter-spacing: 2px;
-    font-weight: 800;
 }
 
 #info_list {
@@ -330,25 +226,197 @@ td, th {
     font-weight: 600;
 }
 
-#prev_next {
-    
-    color: #FFFFFF;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    font-size: 18px;
-    padding: 20px
-}
 
-#prev_next p:last-of-type {
-    
-    flex: 1;
-    text-align: end;
-}
-
-/***************** Screen S/M ****************
+/*************** Butttons ********************
 **********************************************/
+
+#cta_btn {
+    
+    display: block;
+    border-radius: 15% 50% 50% 15%;
+    text-align: left;
+    background-color: rgba(255,255,255,0.3);
+
+}
+
+button:hover {
+    
+    cursor: pointer;
+    text-shadow: 0px 0px #064072;
+}
+
+#launch_btn button {
+    
+    font-family: news-gothic-std;
+    color: #260A09;
+    font-weight: 600;
+}
+
+#launch_btn button:active {
+        
+    color: #064072;
+}
+
+#backToTopBtn {
+    
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 3px;
+    font-size: 14px;
+    background-color: #6588A6;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    height: 50px;
+    border-radius: 50% 50% 4px 4px;
+}
+
+#launches button {
+    
+    display: block;
+    margin: 25px auto;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 500px;
+    height: 50px;
+    border-radius: 20px 50% 50% 20px;
+    background-color: rgba(255,255,255,0.8);
+    font-weight: 600;
+    text-align: left;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+#x_click {
+    
+    display: none;
+}
+
+
+/*************** Searchbar *******************
+**********************************************/
+
+#searchbar {
+        
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+    
+#searchbar input:first-of-type {
+        
+    flex: 0.35;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px
+
+}
+    
+#searchbar input:last-of-type {
+        
+    background-color: rgba(255,255,255,0.8);
+    width: 35px;
+    height: 35px;
+    margin-left: 30px;
+    border-radius: 40%;
+    padding: 10px        
+}
+
+/*************** Table ***********************
+**********************************************/
+    
+table {
+        
+    margin: 0 auto;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    border-collapse: collapse;
+    width: 70%;
+     
+}
+
+td, th {
+        
+    padding: 10px;
+    border: 2px solid #FFFFFF;
+    background-color: rgba(6, 64, 114, 0.8);
+       
+}
+
+/*************** Subscribe *******************
+**********************************************/
+
+#subscribe {
+        
+    color: #FFFFFF;
+    text-align: center;
+    margin: 20px;
+    font-size: 14px;
+}
+    
+#subscribe a {
+        
+    color: black;
+    text-decoration: underline;
+    font-style: oblique
+}
+    
+#subscribe input, #subscribe label,  #unsubscribe input,  #unsubscribe label {
+    
+    color: black;
+    font-weight: 600;
+    padding: 2px;
+    border-radius: 5px;
+    display: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    justify-content: center;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+#unsubscribe input,  #unsubscribe label {
+    
+    display: block;
+}
+
+#subscribe label {
+    
+    margin-top: 20px
+}
+
+#subscribe input:last-of-type, #unsubscribe input:last-of-type {
+    
+    width: 110px;
+    height: 40px;
+    background-color: green;
+    color: #FFFFFF;
+    justify-content: center;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#thanksMsg {
+    
+    font-size: 28px;
+    color: lightgreen;
+    font-weight: 800;
+    margin-top: 20px;
+    display: none;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 2px 2px black
+}
+
+/***************** Screen S/M ************************************
+******************************************************************/
 
 @media only screen and (max-width: 622px) {
     
@@ -365,7 +433,7 @@ td, th {
         letter-spacing: 0.03em;
     }
     
-    #hamburger{
+   #hamburger {
         
         display: flex;
         position: relative;
@@ -377,9 +445,8 @@ td, th {
         border: 1px solid;
         border-radius: 5px;
         padding: 10px;
-        background-color: rgba(255,255,255,0.7);   
+        background-color: rgba(255,255,255,0.7);
     }
-    
     
    #subText {
     
@@ -405,18 +472,11 @@ td, th {
     
     #x_click {
         
-        display: none;
-        width: 40px;
-        height: 40px;
-        margin: 8px;
-        border: 1px solid;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: rgba(255,255,255,0.2);
-
+        display: none
+        
     }
     
-    nav {
+    #topnav {
         
         position: relative;
         top: 60px;
@@ -438,11 +498,10 @@ td, th {
         font-size: 16px;
         color: black;
         font-weight: 550;
-        text-shadow: none;
-        
+        text-shadow: none;  
     }
     
-    .dropItem {
+    nav ul li:hover ul {
         
         display: none;
     }
@@ -465,8 +524,9 @@ td, th {
     
 }
 
-/***************** Screen L ****************
-**********************************************/
+/***************** Screen L **************************************
+******************************************************************/
+
 @media only screen and (min-width: 623px) and (max-width: 1219px) {
     
     #header_index h1 {
@@ -479,14 +539,7 @@ td, th {
         width: 50%;
         text-align: center;
         letter-spacing: 0.09em;
-    }
-
-    nav a {
-        
-        height: 64px;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 0.1em;
+        font-family: starjedi, Rockwell, serif;
     }
     
     nav ul {
@@ -506,10 +559,9 @@ td, th {
     nav ul li {
         
         width: 100%;
+        padding: 5px;
         text-align: center;
         position: relative;
-        border-right: 1px solid white;
-        background-color: rgba(101, 136, 166, 0.5)
     }
     
     nav ul li:last-of-type {
@@ -518,32 +570,9 @@ td, th {
     }
     
     nav ul li ul {
-        
-        position: absolute;
-        display: none;
-        width: 100%;
+
         left: 0;
-        top: 10px;
-    }
-    
-    nav ul li:hover ul {
-      
-        display: flex;
-        flex-direction: column;
-    }
-    
-    nav ul li ul li {
-        
-        padding: 10px 5px;
-        background-color: rgba(101, 136, 166, 0.5);
-        border: none;
-        border-bottom: 1px solid #FFFFFF;
-        text-align: left;
-    }
-    
-     nav ul li ul li a {
-        
-        font-size: 16px;
+        margin-top: 23px;
     }
     
     #subText {
@@ -582,6 +611,7 @@ td, th {
         letter-spacing: 0.1em;
         margin: 10px;
         flex: 0.3;
+        font-family: starjedi, Rockwell, serif;
        
     }
     
@@ -629,8 +659,9 @@ td, th {
     }
 }
 
-/***************** Screen XL ****************
-*********************************************/
+/***************** Screen XL *************************************
+******************************************************************/
+
 @media only screen and (min-width: 1220px) {
     
     body {
@@ -648,6 +679,7 @@ td, th {
         width: 50%;
         text-align: center;
         letter-spacing: 0.18em;
+        font-family: starjedi, Rockwell, serif;
     }
     
     #heading_launch h1 {
@@ -655,15 +687,13 @@ td, th {
         font-size: 28px;
         letter-spacing: 0.1em;
         text-align: center;
-        margin: 20px
+        margin: 20px;
+        font-family: starjedi, Rockwell, serif;
     }
     
-    nav a {
+    nav ul li a {
         
-        height: 64px;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 0.1em;
+        width: 100%
     }
     
     nav ul {
@@ -679,44 +709,12 @@ td, th {
         
         width: 100%;
         position: relative;
-        border-right: 1px solid #FFFFFF;
-        background-color: rgba(255,255,255,0.3);
         padding: 5px 0px;
     }
     
     nav ul li:last-of-type {
         
         border: none
-    }
-    
-    nav ul li ul {
-        
-        position: absolute;
-        display: none;
-        top: 10px;
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    nav ul li:hover ul {
-      
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    nav ul li ul li {
-        
-        padding: 10px 5px;
-        border: none;
-        border-bottom: 1px solid #FFFFFF;
-        background-color: rgba(255,255,255,0.2);
-        text-align: left;
-    }
-    
-    nav ul li ul li a {
-        
-        font-size: 16px;
     }
     
     #subText {
@@ -778,8 +776,7 @@ td, th {
     
     #info_list {
     
-        margin-top: 0px;
-        
+        margin-top: 0px;   
     }
     
 }
