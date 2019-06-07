@@ -18,10 +18,7 @@
             
             <h1 id="title">infinity <span>&amp;</span><br> beyond</h1>
             
-            <img id="hamburger" src="Images/hamburger.png" role="button" alt="picture of hamburger menu / 3 lines on top of each other">
-            
-            <img id="x_click" src="Images/close_x.png" role="button" alt="picture of letter x">
-            
+            <img id="hamburger" src="Images/hamburger.png" onclick="hamburgerToggle()" role="button" alt="picture of hamburger menu / 3 lines on top of each other">
             
             <nav role="navigation" id="topnav">
                 <ul>
@@ -41,21 +38,21 @@
         
         <h2>upcoming<br>launches</h2>
         
-        <form action="launch.html" method="post" id="searchbar">
+        <form id="searchbar">
             <input type="text" placeholder="search..." name="search">
-            <input type="image" src="Images/search_icon.png">
+            <input type="button" src="Images/search_icon.png">
         </form>
         
     <aside>    
-        <form action="launch.html" method="post" id="subscribe">
+        <form action="upcoming.html" method="post" id="subscribe">
             <p>Want the latest updates&#63;<br> 
-            Please <a>subscribe</a></p>
+            Please <span id="subscription">subscribe</span></p>
             <p id="thanksMsg">Thank you for subscribing</p>
             <label for="name">Name:</label>
             <input type="text" name="name">
             <label for="email">E-Mail:</label>
             <input type="email" name="email">
-            <input type="submit" value="Subscribe">
+            <input type="button" value="Subscribe">
         </form>
     </aside>
         
@@ -69,6 +66,7 @@
                         <th>Rocket</th>
                    </tr>
                    </thead>
+                   
                    <tbody>
                     <tr>
                         <td>79</td>
@@ -76,19 +74,14 @@
                         <td>Starlink 1</td>
                         <td>Falcon 9</td>
                     </tr>
-                   </tbody>
-                </table> 
-            
-               <table>
-                   <thead>
+
                     <tr>
-                        <th>Flight Nr</th>
-                        <th>Date</th>
-                        <th>Mission</th>
-                        <th>Rocket</th>
-                   </tr>
-                   </thead>
-                    <tbody>
+                        <td>80</td>
+                        <td>2019-06-11</td>
+                        <td>Radarsat C1, C2, C3</td>
+                        <td>Falcon 9</td>
+                    </tr> 
+                  
                     <tr>
                         <td>80</td>
                         <td>2019-06-11</td>
@@ -96,6 +89,7 @@
                         <td>Falcon 9</td>
                     </tr> 
                    </tbody>
+                   
                 </table> 
         </article>
         
@@ -103,6 +97,6 @@
         
     </body>
     
-     <script src="script.js"></script>
+     <script type="text/javascript" src="script.js"></script>
     
 </html>
