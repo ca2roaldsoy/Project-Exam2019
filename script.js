@@ -8,7 +8,9 @@ var submitBtn = input[2]; //target submit button on subscribe form
 var searchBtn = document.getElementById("searchbar").getElementsByTagName("input")[1];
 var searchInput = document.getElementById("searchbar").getElementsByTagName("input")[0];
 var tr = document.getElementsByTagName("tr");
-var th = document.getElementsByTagName("thead");
+var th = document.getElementsByTagName("th");
+var tableUpcoming = document.getElementById("upcoming");
+var tablePast = document.getElementById("past");
 
 
 // Toggle Hamburger Menu
@@ -74,6 +76,84 @@ function subscript(){
     }
 
 
+fetch("https://api.spacexdata.com/v3/launches/upcoming")
+.then (result => result.json())
+.then ((res) => { 
+    
+        upcomingSpace(res)
+})
+
+.catch (error => console.log(error))
+
+    function upcomingSpace(result) {
+
+        for (var i=0; i < result.length; i++) {
+
+            var results = result[i];
+            console.log(results);
+            var flightNr = results.flight_number;
+            var flightDate = results.launch_date_utc.slice(0, -14);
+            var flightMission = results.mission_name;
+            var flightRocket = results.rocket.rocket_name;
+            var tableRow = document.createElement("tr");
+            var tdFlightNr = document.createElement("td");
+            var tdFlightMission = document.createElement("td");
+            var tdFlightDate = document.createElement("td");
+            var tdFlightRocket = document.createElement("td");
+            tableUpcoming.appendChild(tableRow);
+            tableRow.appendChild(tdFlightNr);
+            tableRow.appendChild(tdFlightDate);
+            tableRow.appendChild(tdFlightMission);
+            tableRow.appendChild(tdFlightRocket);
+            
+            tdFlightNr.innerHTML += flightNr;
+            tdFlightDate.innerHTML += flightDate;
+            tdFlightMission.innerHTML += flightMission;
+            tdFlightRocket.innerHTML += flightRocket;
+
+            }
+    }
+
+fetch("https://api.spacexdata.com/v3/launches/past")
+.then (result => result.json())
+.then ((res) => { 
+    
+        pastSpace(res)
+})
+
+.catch (error => console.log(error))
+
+    function pastSpace(result) {
+
+        for (var i=0; i < result.length; i++) {
+
+            var results = result[i];
+            console.log(results);
+            var flightNr = results.flight_number;
+            var flightDate = results.launch_date_utc.slice(0, -14);
+            var flightMission = results.mission_name;
+            var flightRocket = results.rocket.rocket_name;
+            var tableRow = document.createElement("tr");
+            var tdFlightNr = document.createElement("td");
+            var tdFlightMission = document.createElement("td");
+            var tdFlightDate = document.createElement("td");
+            var tdFlightRocket = document.createElement("td");
+            tablePast.appendChild(tableRow);
+            tableRow.appendChild(tdFlightNr);
+            tableRow.appendChild(tdFlightDate);
+            tableRow.appendChild(tdFlightMission);
+            tableRow.appendChild(tdFlightRocket);
+            
+            tdFlightNr.innerHTML += flightNr;
+            tdFlightDate.innerHTML += flightDate;
+            tdFlightMission.innerHTML += flightMission;
+            tdFlightRocket.innerHTML += flightRocket;
+
+            }
+    }
+
+
+
 //Search Launches
 function userSearch() {
     
@@ -116,3 +196,11 @@ var filter = searchInput.value.toUpperCase();
 subscribe.addEventListener("click", subscript); //clicking subscription button
 submitBtn.addEventListener("click", subscribeBtn); //clicking subscribe button
 searchBtn.addEventListener("click", userSearch); //clicking search button
+
+
+
+
+
+
+
+
