@@ -112,6 +112,17 @@ a {
     text-align: end;
 }
 
+.dropItem {
+    
+    color: white;
+}
+
+.dropItem a:hover {
+    
+    border-bottom: 2px solid #BDC728;
+    cursor: pointer;
+}
+
 /********** Headings & Text ******************
 **********************************************/
 
@@ -157,6 +168,11 @@ span {
     letter-spacing: 0.09em;
 }
 
+#launch_article {
+    
+    width: 100%;
+}
+
 #p_about {
     
     color: black;
@@ -187,6 +203,7 @@ span {
     
     display: block;
     margin: 20px auto;
+    color: #260A09;;
     
 }
 
@@ -233,10 +250,28 @@ span {
 #cta_btn {
     
     display: block;
-    border-radius: 15% 50% 50% 15%;
-    text-align: left;
-    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+    margin: 0 auto;
+    position: relative:
+}
 
+#launch_btn {
+    
+    color: black;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+    padding-top: 60px;
+    text-shadow: 1px 1px white;
+    position: relative;
+    bottom: 190px;
+    height: 8em;
+    width: 8em;
+    font-size: 24px;
 }
 
 button:hover {
@@ -245,10 +280,8 @@ button:hover {
     text-shadow: 0px 0px #064072;
 }
 
-#launch_btn button {
+#launch_btn {
     
-    font-family: news-gothic-std;
-    color: #260A09;
     font-weight: 600;
 }
 
@@ -322,7 +355,12 @@ button:hover {
     height: 35px;
     margin-left: 30px;
     border-radius: 40%;
-    padding: 10px        
+    padding: 10px;
+    background-image: url(Images/search_icon.png);
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
 
 /*************** Table ***********************
@@ -345,6 +383,25 @@ td, th {
     border: 2px solid #FFFFFF;
     background-color: rgba(6, 64, 114, 0.8);
        
+}
+
+tbody > tr:hover {
+    
+    background-color: #BDC728;
+    cursor: pointer;
+}
+
+.moreInfo {
+    
+    color: white;
+    padding: 2vw;
+    background-color: rgba(6, 64, 114, 0.8);
+    border-radius: 2vw;
+    width: 30%;
+    text-align: left;
+    display: none;
+    bottom: 0px;
+    position: fixed;
 }
 
 /*************** Subscribe *******************
@@ -373,8 +430,6 @@ td, th {
     
 #subscribe input, #subscribe label,  #unsubscribe input,  #unsubscribe label {
     
-    color: white;
-    font-weight: 600;
     padding: 2px;
     border-radius: 5px;
     display: none;
@@ -385,9 +440,15 @@ td, th {
     letter-spacing: 0.05em;
 }
 
+#subscribe input {
+    
+    color: black;
+}
+
 #unsubscribe input,  #unsubscribe label {
     
     display: block;
+    
 }
 
 #subscribe label {
@@ -405,6 +466,12 @@ td, th {
     padding: 8px;
     margin-top: 20px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#subscription {
+    
+    cursor: pointer;
 }
 
 #thanksMsg {
@@ -463,16 +530,20 @@ td, th {
     }
 
    #cta_btn {
-        
-        height: 70px;
-        width: 33%;
-        margin: auto;
-        font-weight: 600;
-        color: white;
-        padding: 10px;
-        font-size: 16px;
+    
+        height: 125px;
+        width: 125px;
+        font-size: 18px;
         transform: translateY(250px);
-
+    }
+    
+    #launch_btn {
+      
+        top: 125px;
+        height: 125px;
+        width: 125px;
+        font-size: 20px;
+        padding-top: 35px;
     }
     
     #topnav {
@@ -510,15 +581,19 @@ td, th {
         margin-top: 50px
     }
     
-    #rocket_img {
-        
-        display: none;
-
-    }
+    .moreInfo {
     
-    #prev_next {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 20px;
+        top; 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(6, 64, 114, 0.97);
     
-        top: 33%;
     }
     
 }
@@ -581,17 +656,24 @@ td, th {
         left: 20%;
         width: 60%;
     }
-
+    
     #cta_btn {
-        
+    
+        height: 7em;
+        width: 7em;
         font-size: 24px;
-        position: fixed;
-        top: 70%;
-        left: 35%;
-        width: 30%;
-        padding: 10px;
-        padding: 12px;
+        margin-top: 450px;
     }
+    
+    #launch_btn {
+    
+        height: 7em;
+        width: 7em;
+        font-size: 24px;
+        bottom: 168px;
+        padding-top: 50px
+    }
+    
     
     h2 {
         
@@ -656,6 +738,22 @@ td, th {
         max-width: 350px;
         text-align: left;
     }
+    
+    .moreInfo {
+    
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 20px;
+        top; 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(6, 64, 114, 0.97);
+    
+    }
+    
 }
 
 /***************** Screen XL *************************************
@@ -725,15 +823,12 @@ td, th {
     }
     
     #cta_btn {
-        
+    
+        height: 8em;
+        width: 8em;
         font-size: 24px;
-        position: fixed;
-        border-radius: 15% 50% 50% 15%;
-        top: 80%;
-        left: 41%;
-        width: 20%;
-        padding: 10px 10px 10px 20px;
-    } 
+        margin-top: 525px;
+    }
     
     #title {
         
@@ -777,6 +872,13 @@ td, th {
     
         margin-top: 0px;   
     }
+    
+    .moreInfo {
+    
+        margin-left: 50px
+    
+    }
+
     
 }
 
