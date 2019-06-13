@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="description" content="contact information">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/gue2qgy.css">
+        <link rel="stylesheet" href="style.css">
+        <title>I&amp;B Contact</title>
+        
+    </head>
+    
+    <body>
+        
+        <header role="banner" id="heading_launch">
+            
+            <h1 id="title">infinity <span>&amp;</span><br> beyond</h1>
+            
+            <img id="hamburger" src="Images/hamburger.png" onclick="hamburgerToggle()" role="button" alt="picture of hamburger menu / 3 lines on top of each other">
+            
+            <nav role="navigation" id="topnav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Live Feed</a></li>
+                    <li><a href="launchopt.html">Launch</a>
+                        <ul class= "dropItem">
+                            <li><a href="upcoming.html">Upcoming</a></li>
+                            <li><a href="past.html">Past</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a id="curr_pg" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h2>Contact</h2>
+        
+        <article role="article" id="contact_pg">
+            <section class="contact_info">
+                <h3>Phone</h3>
+                <p>56565656</p>
+            </section>
+            
+            <section class="contact_info">
+                <h3>Adress</h3>
+                <p>Spacestation 56 <br>
+                4343 Milkyway</p>
+            </section>
+            
+            <section class="contact_info">
+                <h3>E-mail</h3>
+                <p>iandb&#64;spacex.com</p>
+            </section>
+            
+            <section id="cancel" class="contact_info">
+                <form action="contact.html" method="post" id="unsubscribe">
+                    <h3>Cancel subscription</h3>
+                    <p id="thanksMsg">Subscription cancelled</p>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" pattern="[a-zA-Z]+">
+                    <p id="err_text_name"></p>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" pattern="([a-z\d\.-_%+]+)+@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?">
+                    <p id="err_text_email"></p>
+                    <input type="button" value="Unsubscribe" id="submit">
+                </form>
+            </section>
+            
+        </article>
+        
+        <button id="backToTopBtn" title="Back to top">Top</button>
+        
+    </body>
+    
+     <script src="script.js"></script>
+     <script src="unsubscribe.js"></script>
+    
+</html>
+    

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="description" content="View upcoming launches">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/gue2qgy.css">
+        <link rel="stylesheet" href="style.css">
+        <title>I&amp;B Launch Schedule</title>
+        
+    </head>
+    
+    <body>
+        
+        <header role="banner" id="heading_launch">
+            
+            <h1 id="title">infinity <span>&amp;</span><br> beyond</h1>
+            
+            <img id="hamburger" src="Images/hamburger.png" onclick="hamburgerToggle()" role="button" alt="picture of hamburger menu / 3 lines on top of each other">
+            
+            <nav role="navigation" id="topnav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Live Feed</a></li>
+                    <li><a id="curr_pg" href="launchopt.html">Launch</a>
+                        <ul class= "dropItem">
+                            <li><a href="upcoming.html">Upcoming</a></li>
+                            <li><a href="past.html">Past</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h2>upcoming<br>launches</h2>
+        
+        <form id="searchbar">
+            <input type="text" placeholder="search..." name="search">
+            <input type="submit" id="searchBtn" value="">
+        </form>
+        
+    <aside>    
+        <form action="upcoming.html" method="post" id="subscribe">
+            <p>Want the latest updates&#63;<br> 
+            Please <span id="subscription">subscribe</span></p>
+            <p id="thanksMsg">Thank you for subscribing</p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" pattern="[a-zA-Z]+">
+            <p id="err_text_name"></p>
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email" pattern="([a-z\d\.-_%+]+)+@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?">
+            <p id="err_text_email"></p>
+            <input type="button" value="Subscribe" id="submit">
+        </form>
+    </aside>
+        
+        <article role="article" id="launch_article">
+               <table>
+                   <thead>
+                    <tr>
+                        <th>Flight Nr</th>
+                        <th>Date</th>
+                        <th>Mission</th>
+                        <th>Rocket</th>
+                   </tr>
+                   </thead>
+                   
+                   <tbody id="upcoming">
+                   
+                   </tbody>
+                   
+                </table> 
+        </article>
+        
+        <button id="backToTopBtn" title="Back to top">Top</button>
+        
+    </body>
+    
+    <script type="text/javascript" src="searchandsubscribe.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="upcoming_api.js"></script>
+    
+</html>
